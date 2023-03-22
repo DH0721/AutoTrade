@@ -1,4 +1,5 @@
 import logging
+import re
 
 # logging.basicConfig(level=logging.DEBUG, filename='example.log')
 
@@ -102,3 +103,8 @@ for floor in apart:
                 continue
         else:
                 print("Newspaper delivery: ", house)
+
+logger.info('--- Example 10 replace #re.sub ---')
+my_str = "The quick brown fox jumps over the lazy dog."
+result = re.sub("the", "a", my_str, flags=re.IGNORECASE)
+print(result) # a quick brown fox jumps over a lazy dog.
